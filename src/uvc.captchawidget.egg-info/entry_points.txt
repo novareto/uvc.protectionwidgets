@@ -1,5 +1,0 @@
-
-      # -*- Entry points: -*-
-      [zeam.form.components]
-      captcha = uvc.protectionwidgets.widgets.captcha:register
-      
