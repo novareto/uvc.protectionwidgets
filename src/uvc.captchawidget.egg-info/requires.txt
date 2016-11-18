@@ -1,0 +1,17 @@
+setuptools
+norecaptcha
+zope.i18n
+zope.component
+zope.interface
+zope.schema
+zope.traversing
+
+[dolmen]
+dolmen.forms.base
+dolmen.forms.ztk
+
+[test]
+
+[zeam]
+zeam.form.base
+zeam.form.ztk

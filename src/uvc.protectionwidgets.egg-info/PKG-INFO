@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: uvc.protectionwidgets
+Version: 1.0.dev0
+Summary: Captcha Widget for UVCSite
+Home-page: UNKNOWN
+Author: Christian Klinger
+Author-email: ck@novareto.de
+License: BSD
+Description: ==========================
+        Captcha Widget for UVCSite
+        ==========================
+        
+        ``skimpyGimpy`` captcha widget
+        
+        Changelog
+        =========
+        
+        
+        1.1 (unreleased)
+        ----------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0 (2016-03-07)
+        ----------------
+        
+          * Initial release.
+        
+Keywords: captcha
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: BSD License
