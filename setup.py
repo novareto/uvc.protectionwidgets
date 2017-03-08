@@ -53,6 +53,8 @@ setup(name='uvc.protectionwidgets',
       # -*- Entry points: -*-
       [zeam.form.components]
       captcha = uvc.protectionwidgets.widgets.captcha:register
+      [dolmen.collection.components]
+      captcha = uvc.protectionwidgets.widgets.captcha:register
       """,
       tests_require = tests_require,
       extras_require = {
