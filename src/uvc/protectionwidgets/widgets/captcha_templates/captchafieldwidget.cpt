@@ -1,8 +1,7 @@
 <div class="field-captcha-wrapper">
 
   <span tal:replace="structure widget.image_tag()" />
-
-  <input type="text" size="40" id="#" class="#"
+  <input type="hidden" size="40" id="#" class="#"
          tal:attributes="name widget.identifier;
                          id widget.htmlId();
                          class widget.htmlClass()" />

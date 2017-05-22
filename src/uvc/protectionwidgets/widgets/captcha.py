@@ -16,11 +16,11 @@ try:
     from zeam.form.base.markers import NO_VALUE
     from zeam.form.base.widgets import WidgetExtractor
     from grokcore.chameleon.components import ChameleonPageTemplateFile
-    def get_template(dir, filename):
-        return ChameleonPageTemplateFile(filename, dir)
+    def get_template(filename, dir):
+        return ChameleonPageTemplateFile(path.join(path.dirname(dir), filename))
 
     from zeam.form.ztk.fields import (
-        SchemaField, registerSchemaFi1eld, SchemaFieldWidget)
+        SchemaField, registerSchemaField, SchemaFieldWidget)
 except ImportError:
     from dolmen.forms.base.markers import NO_VALUE
     from dolmen.forms.base.widgets import WidgetExtractor
@@ -78,7 +78,7 @@ class Recaptcha(object):
 class CaptchaSchemaField(SchemaField):
 
     def validate(self, value, field=None):
-        return super(CaptchaSchemaField, self).validate(value)
+        return super(CaptchaSchemaField, self).validate(value, field)
 
 
 class CaptchaFieldWidget(SchemaFieldWidget):
