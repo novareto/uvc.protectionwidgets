@@ -113,7 +113,7 @@ class CaptchaWidgetExtractor(WidgetExtractor):
             if res.error_code:
                 return (None, _(u"Invalid captcha input."))
             return ("OK", None)
-        return (value, None)
+        return (NO_VALUE, None)
 
 
 def register():
