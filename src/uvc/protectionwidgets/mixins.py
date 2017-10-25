@@ -48,8 +48,8 @@ class CSRFMixin(object):
             session['__csrftoken__'] = self.csrftoken
 
     def checkToken(self):
-        import pdb; pdb.set_trace() 
         session = getSession(self.request)
+        import pdb; pdb.set_trace() 
         if session is None:
             raise CSRFTokenGenerationError("No session.")
         cookietoken = session.get('__csrftoken__')
@@ -59,7 +59,6 @@ class CSRFMixin(object):
             raise InvalidCSRFToken(_('Invalid CSRF token'))
 
     def get_csrftoken(self):
-        print "RET", self.csrftoken
         return unicode(self.csrftoken)
 
     def validateData(self, fields, data):
@@ -72,6 +71,5 @@ class CSRFMixin(object):
         class ICSRF(interface.Interface):
             __csrftoken__ = schema.TextLine(title=u'csrf', defaultFactory=self.get_csrftoken)
         if '__csrftoken__' not in self.fields.keys():
-            print "EXTEND FIELDS"
             self.fields.extend(Fields(ICSRF))
             self.fields['__csrftoken__'].mode = 'hidden'
