@@ -49,7 +49,6 @@ class CSRFMixin(object):
 
     def checkToken(self):
         session = getSession(self.request)
-        import pdb; pdb.set_trace() 
         if session is None:
             raise CSRFTokenGenerationError("No session.")
         cookietoken = session.get('__csrftoken__')
