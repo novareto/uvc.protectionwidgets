@@ -6,10 +6,9 @@
 import binascii
 
 from os import urandom
-from zeam.form.base import Fields
+from uvc.api.api import Fields, ISession
 from zope import interface, schema
 from uvc.protectionwidgets import MF as _
-from zope.session.interfaces import ISession
 
 
 class IInvalidCSRFToken(interface.Interface):
